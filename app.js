@@ -1,0 +1,1 @@
+const movieContainer = document.querySelector('.main')
