@@ -10,10 +10,6 @@ getRandomMovieButton.addEventListener('click', async () => {
 
   const randomId = Math.floor(Math.random() * 500)
 
-
-  moviePoster.src = 'https://image.tmdb.org/t/p/w500$(movieData.poster_path}'
-  movieTitle.textContent = movieData.title
-  movieDescription.textContent = movieData.overview
 })
 
 async function getMovie(randomId){
@@ -21,4 +17,10 @@ async function getMovie(randomId){
   const movieData = await movie.json()
 
   return movieData
+}
+
+function renderMovie(movieData){
+  moviePoster.src = 'https://image.tmdb.org/t/p/w500$(movieData.poster_path}'
+  movieTitle.textContent = movieData.title
+  movieDescription.textContent = movieData.overview
 }
