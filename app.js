@@ -10,11 +10,15 @@ getRandomMovieButton.addEventListener('click', async () => {
 
   const randomId = Math.floor(Math.random() * 500)
 
-  const movie = await fetch('https://api.themoviedb.org/3/movie/${randomId}?api_key=${API_KEY}')
-  const movieData = await movie.json()
 
   moviePoster.src = 'https://image.tmdb.org/t/p/w500$(movieData.poster_path}'
   movieTitle.textContent = movieData.title
   movieDescription.textContent = movieData.overview
-
 })
+
+async function getMovie(randomId){
+  const movie = await fetch('https://api.themoviedb.org/3/movie/${randomId}?api_key=${API_KEY}')
+  const movieData = await movie.json()
+
+  return movieData
+}
