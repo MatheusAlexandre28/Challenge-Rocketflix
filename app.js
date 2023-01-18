@@ -11,5 +11,7 @@ getRandomMovieButton.addEventListener('click', async () => {
   const movieData = await movie.json()
 
   moviePoster.src = 'https://image.tmdb.org/t/p/w500$(movieData.poster_path}'
+  movieTitle.textContent = movieData.title
+  movieDescription.textContent = movieData.overview
 
 })
