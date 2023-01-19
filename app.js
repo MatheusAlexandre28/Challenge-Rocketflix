@@ -10,4 +10,6 @@ getRandomMovieButton.addEventListener('click', async () => {
   const movie = await fetch('https://api.themoviedb.org/3/movie/550?api_key=${API_KEY}')
   const movieData = await movie.json()
 
+  moviePoster.src = 'https://image.tmdb.org/t/p/w500$(movieData.poster_path}'
+
 })
