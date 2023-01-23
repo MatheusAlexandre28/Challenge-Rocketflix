@@ -5,5 +5,5 @@ const movieDescription =  document.querySelector('.movie-Description')
 const getRandomMovieButton = document.querySelector('.find-movie')
 
 getRandomMovieButton.addEventListener('click', async () => {
-  const movie = await fetch
+  const movie = await fetch('https://api.themoviedb.org/3/movie/550?api_key=${API_KEY}')
 })
