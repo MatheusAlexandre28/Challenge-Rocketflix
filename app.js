@@ -4,6 +4,6 @@ const movieTitle =  document.querySelector('.movie-title')
 const movieDescription =  document.querySelector('.movie-Description')
 const getRandomMovieButton = document.querySelector('.find-movie')
 
-getRandomMovieButton.addEventListener('click', () => {
-  const movie = fetch
+getRandomMovieButton.addEventListener('click', async () => {
+  const movie = await fetch
 })
